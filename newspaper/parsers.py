@@ -9,7 +9,7 @@ or query an lxml or soup dom object generated from an article's html.
 import logging
 import lxml.etree
 import lxml.html
-import lxml.html.clean
+import lxml_html_clean
 import re
 from html import unescape
 import string
@@ -73,7 +73,7 @@ class Parser(object):
 
     @classmethod
     def clean_article_html(cls, node):
-        article_cleaner = lxml.html.clean.Cleaner()
+        article_cleaner = lxml_html_clean.Cleaner()
         article_cleaner.javascript = True
         article_cleaner.style = True
         article_cleaner.allow_tags = [
